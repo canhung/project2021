@@ -13,6 +13,6 @@ int main()
 	int a[num] = {1, 2, 3, 4, 5};
 	cout << sizeof(a) << endl;
 	size_of(a);
-	// size tu ben trong va ben ngoai mang khac nhau
+
 	return 0;
 }
