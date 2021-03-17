@@ -1,5 +1,7 @@
 #include <iostream>
 #include <SDL.h>
+//Cấn Mạnh Hùng-20021364
+
 
 using namespace std;
 
