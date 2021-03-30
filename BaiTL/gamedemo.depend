@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1617100386 source:c:\users\dandelion\downloads\gamedemo\main.cpp
+	"commomfunc.h"
+	"BaseObject.h"
+	"game_map.h"
+	"MainObject.h"
+	"Timer.h"
+
+1616997973 source:c:\users\dandelion\downloads\gamedemo\commomfunc.cpp
+	"commomfunc.h"
+
+1617100540 c:\users\dandelion\downloads\gamedemo\commomfunc.h
+	<windows.h>
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1616998279 source:c:\users\dandelion\downloads\gamedemo\baseobject.cpp
+	"BaseObject.h"
+
+1617014512 c:\users\dandelion\downloads\gamedemo\baseobject.h
+	"commomfunc.h"
+
+1617004764 source:c:\users\dandelion\downloads\gamedemo\game_map.cpp
+	"game_map.h"
+
+1617078323 c:\users\dandelion\downloads\gamedemo\game_map.h
+	"commomfunc.h"
+	"BaseObject.h"
+
+1617112741 c:\users\dandelion\downloads\gamedemo\mainobject.h
+	"commomfunc.h"
+	"BaseObject.h"
+
+1617112881 source:c:\users\dandelion\downloads\gamedemo\mainobject.cpp
+	"MainObject.h"
+
+1617099845 source:c:\users\dandelion\downloads\gamedemo\timer.cpp
+	"Timer.h"
+	"commomfunc.h"
+
+1617099824 c:\users\dandelion\downloads\gamedemo\timer.h
+
