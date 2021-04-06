@@ -1,8 +1,10 @@
 #ifndef MAIN_OBJECT_H_
 #define MAIN_OBJECT_H_
 
+#include<vector>
 #include"commomfunc.h"
 #include"BaseObject.h"
+#include"Lopdan.h"
 
 #define tocdoroi 0.8
 #define tocdoroimax 10
@@ -18,8 +20,9 @@ public:
 
     enum WalkType
     {
-        WALK_RIGHT=0,
-        WALK_LEFT=1,
+        WALK_NONE=0,
+        WALK_RIGHT=1,
+        WALK_LEFT=2,
     };
     bool LoadImg(std:: string path, SDL_Renderer* screen);
     void Show(SDL_Renderer*des);
@@ -34,9 +37,16 @@ public:
     void SetMapXY(const int map_x,const int map_y){map_x_=map_x;map_y_=map_y;}
     //ham tinh toan thong so cua map khi nv di chuyen
     void CenterEntityOnMap(Map& map_data);
+    void UpdateImagePlayer(SDL_Renderer* des);
 
-
+    void set_bullet_list(std::vector<Lopdan*> bullet_list)
+    {
+        p_bullet_list_=bullet_list;
+    }
+    std::vector<Lopdan*> get_bullet_list() const {return p_bullet_list_;}
+    void HandleBullet(SDL_Renderer*des);
 private:
+    std::vector<Lopdan*> p_bullet_list_;
     float x_val_;
     float y_val_;
 

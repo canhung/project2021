@@ -2,7 +2,7 @@
 BaseObject:: BaseObject()
 {
     p_object_=NULL;
-    rect_.x=0;
+    rect_.x=0;//vi tri x cua cac doi tuong hinh anh dung trong baseobject
     rect_.y=0;
     rect_.w=0;
     rect_.h=0;
@@ -13,6 +13,7 @@ BaseObject::~BaseObject()
 }
 bool BaseObject:: LoadImg(std:: string path, SDL_Renderer* screen)
 {
+    Free();
     SDL_Texture* new_texture = NULL;
     SDL_Surface* load_surface=IMG_Load(path.c_str());
     if(load_surface != NULL)

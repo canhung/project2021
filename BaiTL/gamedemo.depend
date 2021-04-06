@@ -43,3 +43,56 @@
 
 1617099824 c:\users\dandelion\downloads\gamedemo\timer.h
 
+1617205066 source:c:\users\dandelion\project2021\baitl\baseobject.cpp
+	"BaseObject.h"
+
+1617014512 c:\users\dandelion\project2021\baitl\baseobject.h
+	"commomfunc.h"
+
+1617100540 c:\users\dandelion\project2021\baitl\commomfunc.h
+	<windows.h>
+	<string>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1616997973 source:c:\users\dandelion\project2021\baitl\commomfunc.cpp
+	"commomfunc.h"
+
+1617004764 source:c:\users\dandelion\project2021\baitl\game_map.cpp
+	"game_map.h"
+
+1617078323 c:\users\dandelion\project2021\baitl\game_map.h
+	"commomfunc.h"
+	"BaseObject.h"
+
+1617206412 source:c:\users\dandelion\project2021\baitl\main.cpp
+	"commomfunc.h"
+	"BaseObject.h"
+	"game_map.h"
+	"MainObject.h"
+	"Timer.h"
+
+1617206404 c:\users\dandelion\project2021\baitl\mainobject.h
+	<vector>
+	"commomfunc.h"
+	"BaseObject.h"
+	"Lopdan.h"
+
+1617099824 c:\users\dandelion\project2021\baitl\timer.h
+
+1617207376 source:c:\users\dandelion\project2021\baitl\mainobject.cpp
+	"MainObject.h"
+
+1617099845 source:c:\users\dandelion\project2021\baitl\timer.cpp
+	"Timer.h"
+	"commomfunc.h"
+
+1617727715 source:c:\users\dandelion\project2021\baitl\lopdan.cpp
+	"Lopdan.h"
+
+1617727714 c:\users\dandelion\project2021\baitl\lopdan.h
+	"BaseObject.h"
+	"commomfunc.h"
+

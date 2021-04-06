@@ -33,12 +33,16 @@
 		</Compiler>
 		<Unit filename="BaseObject.cpp" />
 		<Unit filename="BaseObject.h" />
+		<Unit filename="Lopdan.h" />
 		<Unit filename="MainObject.cpp" />
 		<Unit filename="MainObject.h" />
+		<Unit filename="Timer.cpp" />
+		<Unit filename="Timer.h" />
 		<Unit filename="commomfunc.cpp" />
 		<Unit filename="commomfunc.h" />
 		<Unit filename="game_map.cpp" />
 		<Unit filename="game_map.h" />
+		<Unit filename="lopdan.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
