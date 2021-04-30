@@ -28,6 +28,7 @@ const int COLOR_KEY_B=180;
 #define TILE_SIZE 64
 #define MAX_MAP_X 400
 #define MAX_MAP_Y 10
+#define STATE_MONEY 4
 
 typedef struct Input
 {

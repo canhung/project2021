@@ -18,6 +18,7 @@ MainObject::MainObject()
     map_x_=0;
     map_y_=0;
     come_back_time_=0;
+    money_count=0;
 }
 MainObject::~MainObject()
 {
@@ -132,15 +133,6 @@ void MainObject:: HandlInputAction(SDL_Event events, SDL_Renderer* screen)
                 UpdateImagePlayer(screen);
             }
             break;
-        case(SDLK_UP+ SDLK_LEFT):
-            {
-                status_=WALK_LEFT;
-                input_type_.left_=1;
-                input_type_.right_=0;
-                UpdateImagePlayer(screen);
-            }
-            break;
-
 
         }
     } else if(events.type==SDL_KEYUP)
@@ -237,20 +229,43 @@ void MainObject::CheckToMap(Map& map_data)
     {
         if(x_val_>0)//nhan vat dang di chuyen ve ben phai
         {
-            if(map_data.tile[y1][x2]!=0|| map_data.tile[y2][x2]!=0)
+            int val1=map_data.tile[y1][x2];
+            int val2=map_data.tile[y2][x2];
+            if(val1== STATE_MONEY or val2==STATE_MONEY)
+            {
+                map_data.tile[y1][x2]=0;
+                map_data.tile[y2][x2]=0;
+                IncreaseMoney();
+            }
+        else
+        {
+            if(val1!=0|| val2!=0)
             {
                 x_pos_=x2*TILE_SIZE;
                 x_pos_-=width_frame_+1;
                 x_val_=0;
             }
         }
+
+    }
         else if(x_val_<0)
-        {
-            if(map_data.tile[y1][x1]!=0|| map_data.tile[y2][x1]!=0)
+        {   int val1=map_data.tile[y1][x1];
+            int val2=map_data.tile[y2][x1];
+            if(val1== STATE_MONEY or val2==STATE_MONEY)
             {
+                map_data.tile[y1][x1]=0;
+                map_data.tile[y2][x1]=0;
+                IncreaseMoney();
+            }
+            else
+            {
+                if(val1!=0|| val2!=0)
+                {
                 x_pos_=(x1+1)*TILE_SIZE;
                 x_val_=0;
+                }
             }
+
         }
     }
     //kiem tra theo chieu doc
@@ -265,7 +280,17 @@ void MainObject::CheckToMap(Map& map_data)
     {
         if(y_val_>0)
         {
-            if(map_data.tile[y2][x1]!=0 || map_data.tile[y2][x2]!=0)
+            int val1=map_data.tile[y2][x1];
+            int val2=map_data.tile[y2][x2];
+            if (val1== STATE_MONEY or val2 == STATE_MONEY)
+            {
+                map_data.tile[y2][x1]=0;
+                map_data.tile[y2][x2]=0;
+                IncreaseMoney();
+            }
+            else
+            {
+              if(map_data.tile[y2][x1]!=0 || map_data.tile[y2][x2]!=0)
             {
                 y_pos_=y2*TILE_SIZE;
                 y_pos_-=height_frame_+1;
@@ -278,13 +303,26 @@ void MainObject::CheckToMap(Map& map_data)
                 on_ground_=true;//dang tren mat dat
             }
         }
+
+    }
         else if(y_val_<0)
-        {
-            if(map_data.tile[y1][x1]!=0 || map_data.tile[y1][x2]!=0)
+        {   int val1=map_data.tile[y1][x1];
+            int val2=map_data.tile[y1][x2];
+            if (val1== STATE_MONEY or val2 == STATE_MONEY)
+            {
+                map_data.tile[y1][x1]=0;
+                map_data.tile[y1][x2]=0;
+                IncreaseMoney();
+            }
+            else
+            {
+             if(val1!=0 || val2!=0)
             {
                 y_pos_=(y1+1)*TILE_SIZE;
                 y_val_=0;
             }
+            }
+
         }
     }
     x_pos_+=x_val_;
@@ -373,7 +411,10 @@ void MainObject::CenterEntityOnMap(Map& map_data)
         map_data.start_y_=map_data.max_y_-SCREEN_HEIGHT;
     }
 }
-
+void MainObject::IncreaseMoney()
+{
+    money_count++;
+}
 void MainObject:: UpdateImagePlayer(SDL_Renderer*des)
 {
     if(on_ground_==true)

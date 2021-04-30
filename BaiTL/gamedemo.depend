@@ -49,7 +49,7 @@
 1617014512 c:\users\dandelion\project2021\baitl\baseobject.h
 	"commomfunc.h"
 
-1617100540 c:\users\dandelion\project2021\baitl\commomfunc.h
+1619406985 c:\users\dandelion\project2021\baitl\commomfunc.h
 	<windows.h>
 	<string>
 	<SDL.h>
@@ -74,7 +74,7 @@
 	"MainObject.h"
 	"Timer.h"
 
-1617206404 c:\users\dandelion\project2021\baitl\mainobject.h
+1619406985 c:\users\dandelion\project2021\baitl\mainobject.h
 	<vector>
 	"commomfunc.h"
 	"BaseObject.h"
@@ -82,7 +82,7 @@
 
 1617099824 c:\users\dandelion\project2021\baitl\timer.h
 
-1617207376 source:c:\users\dandelion\project2021\baitl\mainobject.cpp
+1619407049 source:c:\users\dandelion\project2021\baitl\mainobject.cpp
 	"MainObject.h"
 
 1617099845 source:c:\users\dandelion\project2021\baitl\timer.cpp

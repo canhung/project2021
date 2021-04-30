@@ -45,7 +45,9 @@ public:
     }
     std::vector<Lopdan*> get_bullet_list() const {return p_bullet_list_;}
     void HandleBullet(SDL_Renderer*des);
+    void IncreaseMoney();
 private:
+    int money_count;
     std::vector<Lopdan*> p_bullet_list_;
     float x_val_;
     float y_val_;
